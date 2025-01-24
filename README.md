@@ -193,8 +193,10 @@ function fetchDiscogsData() {
 
 
 The code is pretty self-explenatory with the comments and the variable naming I believe. Let me know if there's anything weird with it. I think the only limitation is our search speed and the Discogs API, which provides this piece of information on Rate Limiting our Discogs API App:
->  **Rate Limiting** 
+>  **Rate Limiting**
+> 
 > **Requests are throttled by the server by source IP to 60 per minute for authenticated requests, and 25 per minute for unauthenticated requests, with some exceptions.**
+> 
 > Your application should identify itself to our servers via a unique user agent string in order to achieve the maximum number of requests per minute.
 > Our rate limiting tracks your requests using a moving average over a 60 second window. If no requests are made in 60 seconds, your window will reset.
 > We attach the following headers to responses to help you track your rate limit use:
