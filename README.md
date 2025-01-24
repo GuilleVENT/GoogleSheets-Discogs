@@ -199,7 +199,9 @@ The code is pretty self-explenatory with the comments and the variable naming I 
 > Our rate limiting tracks your requests using a moving average over a 60 second window. If no requests are made in 60 seconds, your window will reset.
 > We attach the following headers to responses to help you track your rate limit use:
 > >`X-Discogs-Ratelimit`: The total number of requests you can make in a one minute window.
+> 
 > > `X-Discogs-Ratelimit-Used` : The number of requests you’ve made in your existing rate limit window.
+> 
 > >`X-Discogs-Ratelimit-Remaining`: The number of remaining requests you are able to make in the existing rate limit window.
 
 This is why we will add a bottleneck to our speed and limit the rate to 1 record every aprox. 1.5 seconds. 
